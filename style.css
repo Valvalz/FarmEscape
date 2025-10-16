@@ -1,0 +1,105 @@
+/* Feito por Valdecyr Gabryel Bento
+
+ */
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  color: white;
+}
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 3px 5px 0px 0px rgba(0,0,0,0.75);
+}
+#counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#end {
+  position: fixed; /* cover the viewport reliably */
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  background: rgba(0,0,0,0.55); /* subtle dark overlay behind the card */
+  z-index: 1000;
+  overflow: auto; /* avoid layout issues when content is large */
+}
+#endContent {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border-radius: 14px;
+  padding: 28px;
+  min-width: 360px; /* smaller min-width to avoid forcing horizontal scroll */
+  max-width: calc(100% - 40px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+#endTitle {
+  font-size: 1.25em;
+  color: #fff;
+  background: linear-gradient(90deg, #ff8a80, #c62828);
+  padding: 18px 32px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.6);
+}
+
+#endScore {
+  color: #fff;
+  font-size: 1em;
+  min-height: 1.5em;
+}
+
+.endActions {
+  display: flex;
+  gap: 12px;
+}
+
+.endActions button {
+  background: #ff5252;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border: none;
+  box-shadow: 4px 6px 0 rgba(0,0,0,0.6);
+}
+
+.endActions button#start {
+  background: linear-gradient(90deg,#66bb6a,#43a047);
+}
+#controlls {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#controlls div {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 20px;
+}
+#controlls button {
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+#controlls button:first-of-type {
+  grid-column: 1/-1;
+}
